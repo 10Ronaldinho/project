@@ -4,3 +4,4 @@
 github跟踪的是文件的修改，不是文件本身
 tarcks the changes of files
 这是dec分支操作。
+这是一个新的分支feature1,建议分支的速度非常快。
