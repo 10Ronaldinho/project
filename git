@@ -1,0 +1,66 @@
+[33mcommit 57f6175e6fe489b1cff5c65ac7d7676a9475de94[m
+Merge: 453a0b6 41c7b16
+Author: 10Ronaldinho <mygithubb@163.com>
+Date:   Wed Jul 8 11:14:12 2015 +0800
+
+    add adasd
+
+[33mcommit 453a0b6f45f3417e98cea270e503b7b6d6798cb2[m
+Author: 10Ronaldinho <mygithubb@163.com>
+Date:   Wed Jul 8 11:07:07 2015 +0800
+
+    master operate
+
+[33mcommit 41c7b1683110a43697866c3a59050d041842f995[m
+Author: 10Ronaldinho <mygithubb@163.com>
+Date:   Wed Jul 8 11:04:44 2015 +0800
+
+    new branch feature1
+
+[33mcommit 2b7ddf366068f3a70ec70b3e096041d6763619c1[m
+Author: 10Ronaldinho <mygithubb@163.com>
+Date:   Wed Jul 8 11:00:11 2015 +0800
+
+    branch test
+
+[33mcommit 9e4519ba375fe937c51cd9677d9d0f5b8296ebc9[m
+Author: 10Ronaldinho <mygithubb@163.com>
+Date:   Wed Jul 8 10:23:16 2015 +0800
+
+    delete test.txt
+
+[33mcommit 15afe440f4fea4f840bb3a8c7647631899f2841f[m
+Author: 10Ronaldinho <mygithubb@163.com>
+Date:   Wed Jul 8 10:19:20 2015 +0800
+
+    add test.txt
+
+[33mcommit 73834efc9f8a70fd96f0965c5a0f2f518e29cf1e[m
+Author: 10Ronaldinho <mygithubb@163.com>
+Date:   Wed Jul 8 10:05:57 2015 +0800
+
+    commit
+
+[33mcommit 9e4e2f1faf93772abbeaa158d3512ac3160ff02f[m
+Author: 10Ronaldinho <mygithubb@163.com>
+Date:   Wed Jul 8 10:01:52 2015 +0800
+
+    git tracks changes
+
+[33mcommit c0658c7d73f8d126242c5cb4cea3ff9cc5ade52d[m
+Author: 10Ronaldinho <mygithubb@163.com>
+Date:   Wed Jul 8 09:58:09 2015 +0800
+
+    understand how index/stage works
+
+[33mcommit 3bd1c0e723294ca63f6364fe346e980268915603[m
+Author: 10Ronaldinho <mygithubb@163.com>
+Date:   Wed Jul 8 09:37:26 2015 +0800
+
+    add the second sentence
+
+[33mcommit 26e72fa95ee6bb93c4c1d77529bc047ae0fdf1f9[m
+Author: 10Ronaldinho <mygithubb@163.com>
+Date:   Wed Jul 8 09:22:00 2015 +0800
+
+    push the readme file
