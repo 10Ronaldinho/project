@@ -4,10 +4,4 @@
 github跟踪的是文件的修改，不是文件本身
 tarcks the changes of files
 这是dec分支操作。
-<<<<<<< HEAD
-这是对分支的一个测试，，现在是master
-=======
-这是一个新的分支feature1,建议分支的速度非常快aaaaaaaa。
->>>>>>> feature1
-asdasd
-
+这就是一个test
