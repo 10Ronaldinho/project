@@ -7,6 +7,7 @@ tarcks the changes of files
 <<<<<<< HEAD
 这是对分支的一个测试，，现在是master
 =======
-这是一个新的分支feature1,建议分支的速度非常快。
+这是一个新的分支feature1,建议分支的速度非常快aaaaaaaa。
 >>>>>>> feature1
 asdasd
+
