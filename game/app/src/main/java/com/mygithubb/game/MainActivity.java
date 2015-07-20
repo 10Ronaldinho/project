@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static com.mygithubb.game.R.id.button;
+import static com.mygithubb.game.R.id.text;
 
 
 public class MainActivity extends Activity {
@@ -27,13 +28,14 @@ public class MainActivity extends Activity {
     private TextView text_time;
     private Button btn;
     private String[] directs = {"left", "right", "down", "up"};
+    private Boolean isStop = false;
 
 
     private float startX, startY, offsetX, offsetY;
 
 
-    private int scores = 0;
-    private int time = 30;
+    private int scores  = 0;
+    private int time  = 30;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +90,7 @@ public class MainActivity extends Activity {
                                 } else {
                                     System.out.println("please retry ,your final score is " + scores);
                                     showAlert().show();
+                                    isStop = true;
                                 }
 
                             } else if (offsetX > 8) {
@@ -98,6 +101,7 @@ public class MainActivity extends Activity {
                                 } else {
                                     System.out.println("please retry,  your final score is " + scores);
                                     showAlert().show();
+                                    isStop = true;
                                 }
 
                             }
@@ -110,6 +114,7 @@ public class MainActivity extends Activity {
                                 } else {
                                     System.out.println("please retry , your final score is " + scores);
                                     showAlert().show();
+                                    isStop = true;
                                 }
 
                             } else if (offsetY > 8) {
@@ -121,6 +126,7 @@ public class MainActivity extends Activity {
                                 } else {
                                     System.out.println("please retry , your final score is " + scores);
                                     showAlert().show();
+                                    isStop = true;
                                 }
 
 
@@ -140,8 +146,9 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                new Thread(new MyThread()).start();
-
+               Thread myThread = new Thread(new MyThread());
+                myThread.start();
+                btn.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -149,15 +156,24 @@ public class MainActivity extends Activity {
 
     Handler handler = new Handler() {
         public void handleMessage(Message msg) {
-            text_time.setText(Integer.toString(time--));
-            super.handleMessage(msg);
+            switch (msg.what) {
+                case 1:
+                    text_time.setText(Integer.toString(time--));
+                    super.handleMessage(msg);
+                    break;
+            }
+            if (time == 0) {
+                showAlert().show();
+            }
+
+
         }
     };
 
 
     class MyThread implements Runnable {
         public void run() {
-            while (time > 0) {
+            while (time > 0 && !isStop) {
                 try {
                     Thread.sleep(1000);
                     Message msg = new Message();
@@ -167,6 +183,7 @@ public class MainActivity extends Activity {
                     Toast.makeText(MainActivity.this, "something wrong", Toast.LENGTH_LONG).show();
                 }
             }
+
         }
     }
 
@@ -212,9 +229,14 @@ public class MainActivity extends Activity {
 
     //重新开始游戏。
     private void retry() {
-        onRestart();
-        text_score.setText(0 + "");
+        time = 30;
+        scores = 0;
+        onStart();
+        isStop = false;
         changeDirect();
+        btn.setVisibility(View.VISIBLE);
+        text_time.setText(time + "");
+        text_score.setText(scores + "");
     }
 
     /*
